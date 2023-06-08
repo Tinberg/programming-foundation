@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html id="myhtml" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&family=Tajawal:wght@200;300;400;500&display=swap"
+        rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/b515e79b0f.js" crossorigin="anonymous"></script>
+    <script defer src="index.js"></script>
+
+    <link href='index.css' rel='stylesheet'>
+    <link rel='icon' href='data:;base64,='>
+
+    <title>Programming Foundations</title>
+</head>
+
+<body>
+
+    <!--HEADER-->
+
+    <header>
+        <input type="checkbox" id="menu-checkbox">
+        <label for="menu-checkbox" class="hamburger-icon" aria-label="hamburger menu"><i
+                class="fas fa-bars"></i></label>
+
+        <nav id="header-nav">
+            <a class="nav-link" href="#">Products</a>
+            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+        </nav>
+    </header>
+
+    <!--HERO-SECTION-->
+
+    <section class="background" aria-label="An iPhone 12 on a white surface with monstera leaves in the corners">
+        <div class="text">
+            <h1 class="headline-1">iPhone 13</h1>
+
+            <p>
+                Finest technology.
+            </p>
+
+            <a href="#" class="button" onclick="changeColour">BUY NOW</a>
+        </div>
+    </section>
+
+    <!--SECTION-->
+
+    <section class="other-content">
+        <div class="container-switch">
+            <label class="switch"><input id="switch-toggle" type="checkbox">
+                <div class="toggle-circle"></div>
+            </label>
+            <p class="dark-light">Light Mode / Dark Mode</p>
+        </div>
+
+        <section id="bottom" class="bottom">
+
+            <div class="info">
+                <h2 id="brand"></h2>
+                <h2 id="model"></h2>
+                <h3>Product info</h3>
+                <p>
+                    The iPhone X is a premium smartphone from Apple that offers a stunning design and a range of
+                    advanced features.
+                    It features a sleek, bezel-less 5.8-inch Super Retina OLED display, providing vibrant colors and
+                    excellent clarity.</p>
+                <p>The phone is available in four elegant color options: </p>
+                <div id="colors" class="colors">
+                    <div class="container">
+                        <div id="black" class="black circle"></div>
+                        <p id="black-stock"></p>
+                    </div>
+                    <div class="container">
+                        <div id="gold" class="gold circle"></div>
+                        <p id="gold-stock"></p>
+                    </div>
+                    <div class="container">
+                        <div id="silver" class="silver circle"></div>
+                        <p id="silver-stock"></p>
+                    </div>
+                    <div class="container">
+                        <div id="blue" class="blue circle"></div>
+                        <p id="blue-stock"></p>
+                    </div>
+                </div>
+                <p>Choose between four different storage options: </p>
+                <div id="storage" class="storage">
+                    <p id="size1">128GB</p>
+                    <p id="size2">256GB</p>
+                    <p id="size3">512GB</p>
+                    <p id="size4">1TB</p>
+                </div>
+                <div class="line"></div>
+                <p id="price" class="price"></p>
+                <p class="stock" id="stock"></p>
+                <button class="button">BUY NOW</button>
+            </div>
+
+            <div class="img-container">
+                <img id="iphone" src="/images/iphone1 1.png" alt="The back of a black iphone">
+            </div>
+        </section>
+        <div class="background2"></div>
+
+        <!--FOOTER-->
+
+        <footer>
+            <div id="footer-wrapper">
+                <div class="col" id="col-1">
+                    <p class="footer-heading">COPYRIGHT</p>
+                    <p>© PhoneShop 2023</p>
+                    <p>Terms & Conditions</p>
+                    <p>Privacy policy</p>
+                </div>
+
+                <div class="col" id="col-2">
+                    <a href="#" class="footer-heading">CONTACT</a>
+                    <p>Storgata 1, 0558 Oslo</p>
+                    <p>Tlf: + 47 55 33 40 70</p>
+                    <p>E-mail: contact@phoneshop.com</p>
+                </div>
+
+                <div class="col" id="col-3">
+                    <p class="footer-heading">SOCIAL MEDIA:</p>
+                    <a href="#"
+                        aria-label="Clickable button of the Instagram-logo redirecting to the museum's Instagram-account"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="#"
+                        aria-label="Clickable button of the Facebook-logo redirecting to the museum's Facebook-account"><i
+                            class="fa-brands fa-square-facebook"></i></a>
+                </div>
+            </div>
+        </footer>
+
+    </section>
+</body>
+
+</html>
