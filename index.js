@@ -6,7 +6,7 @@ window.onload = function() {
 
 var iphone = {
     brand: "Apple",
-    model: "Iphone 13",
+    model: "Iphone 14",
     color: ["black", "gold", "silver", "blue"],
     storageCapacity: ["156 gb", "256 gb", "558 gb", "1 gb"],
     price: [8000, 10000, 12999, 15000],
@@ -20,20 +20,81 @@ console.log(iphone);
 
 //i make variables to target my html
 var backgroundSwitch = document.getElementById("switch-toggle");
-var body = document.getElementById("bottom");
+var body = document.getElementById("mybody");
 var html = document.getElementById("myhtml")
 
 
 backgroundSwitch.addEventListener("change", function(){
   iphone.background = !iphone.background;//use my bolean value to change colours 
+  body.style.border = iphone.background ? "groove 1px white" : "groove 1px black"
   body.style.backgroundColor = iphone.background ? "black" : "white";
   html.style.color = iphone.background ? "white" : "black";
   html.style.backgroundColor = iphone.background ? "black" : "white";
   
 });
 
+//function 2//
+//in this function i should make a loop so my text disappear when i click another.
 
-//i use variable IPHONE and use innerHTML to make text with javascript
+//here i make a variable for my bolean 
+var availability = [
+  {inStock: true },
+  {inStock: false }
+];
+
+//variables made of the paragraphs in HTML.
+var blackStock = document.getElementById("black-stock")
+var goldStock = document.getElementById("gold-stock")
+var silverStock = document.getElementById("silver-stock")
+var blueStock = document.getElementById("blue-stock")
+
+
+
+//here i use my variables and use [] to select if its true or false i hardcoded the textContent but i know it probably is not the best way to do it.
+black.addEventListener("click", function() {
+  if (availability[0].inStock) {
+    blackStock.textContent = "In stock";
+    blackStock.style.color = "green";
+  } else {
+    blackStock.textContent = "Out of stock";
+    blackStock.style.color = "red";
+  }
+});
+
+gold.addEventListener("click", function() {
+  if (availability[1].inStock) {
+    goldStock.textContent = "In stock";
+    goldStock.style.color = "green";
+  } else {
+    goldStock.textContent = "Out of stock";
+    goldStock.style.color = "red";
+  }
+});
+
+silver.addEventListener("click", function() {
+  if (availability[0].inStock) {
+    silverStock.textContent = "In stock";
+    silverStock.style.color = "green";
+  } else {
+    silverStock.textContent = "Out of stock";
+    silverStock.style.color = "red";
+  }
+});
+
+blue.addEventListener("click", function() {
+  if (availability[1].inStock) {
+    blueStock.textContent = "In stock";
+    blueStock.style.color = "green";
+  } else {
+    blueStock.textContent = "Out of stock";
+    blueStock.style.color = "red";
+  }
+});
+
+
+
+
+//variable IPHONE and innerHTML to make text with javascript in HTML
 document.getElementById("brand").innerHTML = iphone.brand;
 document.getElementById("model").innerHTML = iphone.model;
 
@@ -58,55 +119,6 @@ storageAndPrice("size4", 3);
 
 
 
-//function 2//
-//in this function i should make a loop so my text disappear when i click another.
-
-//here i make a variable for my bolean 
-var availability = [
-    {inStock: true },
-    {inStock: false }
-  ];
-  
-
-//variables made of the paragraphs in HTML.
-var blackStock = document.getElementById("black-stock")
-var goldStock = document.getElementById("gold-stock")
-var silverStock = document.getElementById("silver-stock")
-var blueStock = document.getElementById("blue-stock")
-  
-  
-  //here i use my variables and use [] to select if its true or false i hardcoded the textContent but i know it probably is not the best way to do it.
-  black.addEventListener("click", function() {
-    if (availability[0].inStock) {
-      blackStock.textContent = "In stock";
-    } else {
-      blackStock.textContent = "Out of stock";
-    }
-  });
-  
-  gold.addEventListener("click", function() {
-    if (availability[1].inStock) {
-      goldStock.textContent = "In stock";
-    } else {
-      goldStock.textContent = "Out of stock";
-    }
-  });
-  
-  silver.addEventListener("click", function() {
-    if (availability[0].inStock) {
-      silverStock.textContent = "In stock";
-    } else {
-      silverStock.textContent = "Out of stock";
-    }
-  });
-
-  blue.addEventListener("click", function() {
-    if (availability[1].inStock) {
-      blueStock.textContent = "In stock";
-    } else {
-      blueStock.textContent = "Out of stock";
-    }
-  });
 
 
 
