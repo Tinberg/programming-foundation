@@ -13,10 +13,24 @@ var iphone = {
     background: false
     } 
 
+    var availability = [
+      {inStock: true },
+      {inStock: false }
+    ];
+
 console.log(iphone);
 
+//object: iphone - key: brand
+document.getElementById("brand").innerHTML = iphone.brand;
 
-//function0// //bolean
+// object: iphone - key: model
+document.getElementById("model").innerHTML = iphone.model;
+
+//object: iphone - key:price
+document.getElementById("price").innerHTML = iphone.price;
+
+
+//function0// //object: iphone - key: background
 
 //i make variables to target my html
 var backgroundSwitch = document.getElementById("switch-toggle");
@@ -33,16 +47,10 @@ backgroundSwitch.addEventListener("change", function(){
   
 });
 
-//function 2//
+
+//function 1// //object: availability - key: instock
+
 //in this function i should make a loop so my text disappear when i click another.
-
-//here i make a variable for my bolean 
-var availability = [
-  {inStock: true },
-  {inStock: false }
-];
-
-//variables made of the paragraphs in HTML.
 var blackStock = document.getElementById("black-stock")
 var goldStock = document.getElementById("gold-stock")
 var silverStock = document.getElementById("silver-stock")
@@ -50,7 +58,7 @@ var blueStock = document.getElementById("blue-stock")
 
 
 
-//here i use my variables and use [] to select if its true or false i hardcoded the textContent but i know it probably is not the best way to do it.
+//here i use my object and use [] to select if its true or false i hardcoded the textContent but i know it probably is not the best way to do it.
 black.addEventListener("click", function() {
   if (availability[0].inStock) {
     blackStock.textContent = "In stock";
@@ -94,9 +102,10 @@ blue.addEventListener("click", function() {
 
 
 
-//variable IPHONE and innerHTML to make text with javascript in HTML
-document.getElementById("brand").innerHTML = iphone.brand;
-document.getElementById("model").innerHTML = iphone.model;
+
+
+
+
 
 
 //function1//
@@ -118,6 +127,8 @@ storageAndPrice("size3", 2);
 storageAndPrice("size4", 3);
 
 
+
+//variable IPHONE and innerHTML to make text with javascript in HTML
 
 
 
