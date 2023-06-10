@@ -138,6 +138,7 @@ h1 {
 
  .text {
 	width: 700px;
+	text-align: center;
  }
 
  .storage-container {
@@ -157,6 +158,16 @@ h1 {
  .price-container {
 	display: flex;
 	align-items: center;
+	font-size: 1.4rem;
+	font-weight: 600;
+ }
+
+ .button {
+	padding: 20px 80px;
+	background-color: rgb(31, 183, 31);
+	font-size: 1.4rem;
+	border-radius: 15px;
+	margin: 40px 0 60px;
  }
 
 

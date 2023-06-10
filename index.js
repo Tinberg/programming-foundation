@@ -23,9 +23,6 @@ document.getElementById("brand").innerHTML = iphone.brand;
 // object: iphone - key: model
 document.getElementById("model").innerHTML = iphone.model;
 
-//object: iphone - key:price
-document.getElementById("price").innerHTML = iphone.price;
-
 
 //function0// //object: iphone - key: background
 
