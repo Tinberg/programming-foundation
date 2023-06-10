@@ -53,7 +53,8 @@ backgroundSwitch.addEventListener("change", function(){
 
 //function 1// //object: availability - key: instock
 
-//in this function i should make a loop so my text disappear when i click another.
+//could i make a loop so my text disappear when i click another to make the function more functional to a real website?
+
 var blackStock = document.getElementById("black-stock")
 var goldStock = document.getElementById("gold-stock")
 var silverStock = document.getElementById("silver-stock")
@@ -130,8 +131,7 @@ setTotalPrice("xl", 3);
 
 
 
-//readme i described my functions and my javascript in my js file. i know my javascript code is not optimal, but i tried out different ways to write it, and learned alot. variation iphone has a brand and model that i wrote in javascript to add to html. 
-// storageCapacity is how much hard drive each phone has, and i used function1 link storageCapacity to price. background is my bolean, and it's function is to set background to dark mode or light mode. function2 is just a test, and i know the code is bad. later i will change it and make a loop for it so it functions better. 
+
 
 
 
