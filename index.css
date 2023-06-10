@@ -118,7 +118,8 @@ h1 {
 	padding: 0 70px 50px;	
  }
 
- img:hover {
+ img:hover,
+ .storage:hover {
 	transform: scale(1.1);
 	cursor: pointer;
  }
@@ -139,6 +140,20 @@ h1 {
 	width: 700px;
  }
 
+ .storage-container {
+	display: flex;
+	padding: 25px;
+ }
+
+ .storage {
+	padding: 15px;
+	margin: 15px;
+	border: groove 1px black;
+	border-radius: 10px;
+	
+ }
+
+ 
  .price-container {
 	display: flex;
 	align-items: center;

@@ -13,10 +13,7 @@ var iphone = {
     background: false
     } 
 
-    var availability = [
-      {inStock: true },
-      {inStock: false }
-    ];
+ 
 
 console.log(iphone);
 
@@ -32,20 +29,29 @@ document.getElementById("price").innerHTML = iphone.price;
 
 //function0// //object: iphone - key: background
 
-//i make variables to target my html
 var backgroundSwitch = document.getElementById("switch-toggle");
 var body = document.getElementById("mybody");
-var html = document.getElementById("myhtml")
+var html = document.getElementById("myhtml");
+var storageBorder1 = document.getElementById("small");
+var storageBorder2 = document.getElementById("medium");
+var storageBorder3 = document.getElementById("large");
+var storageBorder4 = document.getElementById("xl");
 
 
 backgroundSwitch.addEventListener("change", function(){
   iphone.background = !iphone.background;//use my bolean value to change colours 
-  body.style.border = iphone.background ? "groove 1px white" : "groove 1px black"
+  body.style.border = iphone.background ? "groove 1px white" : "groove 1px black";
   body.style.backgroundColor = iphone.background ? "black" : "white";
   html.style.color = iphone.background ? "white" : "black";
   html.style.backgroundColor = iphone.background ? "black" : "white";
-  
+  storageBorder1.style.border = iphone.background ? "groove 1px white" : "groove 1px black";
+  storageBorder2.style.border = iphone.background ? "groove 1px white" : "groove 1px black";
+  storageBorder3.style.border = iphone.background ? "groove 1px white" : "groove 1px black";
+  storageBorder4.style.border = iphone.background ? "groove 1px white" : "groove 1px black";
 });
+
+
+
 
 
 //function 1// //object: availability - key: instock
@@ -56,7 +62,10 @@ var goldStock = document.getElementById("gold-stock")
 var silverStock = document.getElementById("silver-stock")
 var blueStock = document.getElementById("blue-stock")
 
-
+var availability = [
+  {inStock: true },
+  {inStock: false }
+];
 
 //here i use my object and use [] to select if its true or false i hardcoded the textContent but i know it probably is not the best way to do it.
 black.addEventListener("click", function() {
@@ -103,49 +112,29 @@ blue.addEventListener("click", function() {
 
 
 
-
-
-
-
-
-//function1//
+//function2//
 
 // i used all may variables to not hardcode it for my textContent.
-function storageAndPrice(storage, number){
-    var sizeButton = document.getElementById(storage);
-    var priceText = "Total:";
-    var currency = "KR";
-    sizeButton.addEventListener("click", function(){
-        document.getElementById("price").textContent = priceText + iphone.price[number] + currency;
-    });
+function setTotalPrice(storage, number){
+  var sizeButton = document.getElementById(storage);
+  var priceText = "Total:";
+  var currency = "KR";
+  sizeButton.addEventListener("click", function(){
+      document.getElementById("price").textContent = priceText + iphone.price[number] + currency;
+  });
 }
 
 //i take the function and target the divs in html and set a number to them so i can use it in my funciton above
-storageAndPrice("size1", 0);
-storageAndPrice("size2", 1);
-storageAndPrice("size3", 2);
-storageAndPrice("size4", 3);
-
-
-
-//variable IPHONE and innerHTML to make text with javascript in HTML
-
-
+setTotalPrice("small", 0);
+setTotalPrice("medium", 1);
+setTotalPrice("large", 2);
+setTotalPrice("xl", 3);
 
 
 
 
 //readme i described my functions and my javascript in my js file. i know my javascript code is not optimal, but i tried out different ways to write it, and learned alot. variation iphone has a brand and model that i wrote in javascript to add to html. 
 // storageCapacity is how much hard drive each phone has, and i used function1 link storageCapacity to price. background is my bolean, and it's function is to set background to dark mode or light mode. function2 is just a test, and i know the code is bad. later i will change it and make a loop for it so it functions better. 
-
-
-
-
-
-
-
-
-
 
 
 
