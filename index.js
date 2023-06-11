@@ -35,7 +35,7 @@ var storageBorder3 = document.getElementById("large");
 var storageBorder4 = document.getElementById("xl");
 
 
-backgroundSwitch.addEventListener("change", function(){
+backgroundSwitch.addEventListener("change", function backgroundDarkOrLight(){
   iphone.background = !iphone.background;//use my bolean value to change colours 
   body.style.border = iphone.background ? "groove 1px white" : "groove 1px black";
   body.style.backgroundColor = iphone.background ? "black" : "white";
@@ -66,7 +66,7 @@ var availability = [
 ];
 
 //here i use my object and use [] to select if its true or false i hardcoded the textContent but i know it probably is not the best way to do it.
-black.addEventListener("click", function() {
+black.addEventListener("click", function stockBlack() {
   if (availability[0].inStock) {
     blackStock.textContent = "In stock";
     blackStock.style.color = "green";
@@ -76,7 +76,7 @@ black.addEventListener("click", function() {
   }
 });
 
-gold.addEventListener("click", function() {
+gold.addEventListener("click", function stockGold() {
   if (availability[1].inStock) {
     goldStock.textContent = "In stock";
     goldStock.style.color = "green";
@@ -86,7 +86,7 @@ gold.addEventListener("click", function() {
   }
 });
 
-silver.addEventListener("click", function() {
+silver.addEventListener("click", function stockSilver() {
   if (availability[0].inStock) {
     silverStock.textContent = "In stock";
     silverStock.style.color = "green";
@@ -96,7 +96,7 @@ silver.addEventListener("click", function() {
   }
 });
 
-blue.addEventListener("click", function() {
+blue.addEventListener("click", function stockBlue() {
   if (availability[1].inStock) {
     blueStock.textContent = "In stock";
     blueStock.style.color = "green";
