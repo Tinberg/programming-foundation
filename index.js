@@ -5,13 +5,29 @@ window.onload = function() {
 // IPHONE //
 
 var iphone = {
-    brand: "Apple",
-    model: "Iphone 14",
-    color: ["black", "gold", "silver", "blue"],
-    storageCapacity: ["156 gb", "256 gb", "558 gb", "1 gb"],
-    price: [8000, 10000, 12999, 15000],
-    background: false
-    } 
+  brand: "Apple",
+  model: "Iphone 14",
+  color: ["black", "gold", "silver", "blue"],
+  storageCapacity: ["156 gb", "256 gb", "558 gb", "1 gb"],
+  price: [8000, 10000, 12999, 15000],
+  numberOfCameras: 2,
+  background: false,
+
+  setTotalPrice: function(storage, number) {
+      var sizeButton = document.getElementById(storage);
+      var priceText = "Total:";
+      var currency = "KR";
+      sizeButton.addEventListener("click", function() {
+          document.getElementById("price").textContent = priceText + this.price[number] + currency;
+      }.bind(this)); // Using bind to refer to the object's properties
+  }
+}
+
+// Use the method
+iphone.setTotalPrice("small", 0);
+iphone.setTotalPrice("medium", 1);
+iphone.setTotalPrice("large", 2);
+iphone.setTotalPrice("xl", 3);
 
  
 
@@ -108,25 +124,6 @@ blue.addEventListener("click", function stockBlue() {
 
 
 
-
-
-//function2//
-
-// i used all may variables to not hardcode it for my textContent.
-function setTotalPrice(storage, number){
-  var sizeButton = document.getElementById(storage);
-  var priceText = "Total:";
-  var currency = "KR";
-  sizeButton.addEventListener("click", function(){
-      document.getElementById("price").textContent = priceText + iphone.price[number] + currency;
-  });
-}
-
-//i take the function and target the divs in html and set a number to them so i can use it in my funciton above
-setTotalPrice("small", 0);
-setTotalPrice("medium", 1);
-setTotalPrice("large", 2);
-setTotalPrice("xl", 3);
 
 
 
