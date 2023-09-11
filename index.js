@@ -12,14 +12,14 @@ var iphone = {
   price: [8000, 10000, 12999, 15000],
   numberOfCameras: 2,
   background: false,
+  priceText: "Total:",
+  currency: "KR",
 
   setTotalPrice: function(storage, number) {
       var sizeButton = document.getElementById(storage);
-      var priceText = "Total:";
-      var currency = "KR";
       sizeButton.addEventListener("click", function() {
-          document.getElementById("price").textContent = priceText + this.price[number] + currency;
-      }.bind(this)); // Using bind to refer to the object's properties
+          document.getElementById("price").textContent = this.priceText + this.price[number] + this.currency;
+      }.bind(this)); 
   }
 }
 
